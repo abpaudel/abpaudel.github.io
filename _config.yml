@@ -30,7 +30,7 @@ linkedin: abpaudel
 
 
 # Disqus
-disqus: False
+disqus: True
 disqus_shortname: abpaudel # replace with your disqus username
 
 # Google Analytics
