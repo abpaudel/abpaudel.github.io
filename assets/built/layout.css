@@ -1,0 +1,71 @@
+#bio-image {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.wrapper { 
+  border : 100px; 
+  overflow:hidden;
+  margin: 25px;
+}
+
+.wrapper div {
+   height: auto;
+   padding: 10px;
+}
+
+#left {
+  float:left; 
+  margin-right:20px;
+  width:200px;
+  border-right:2px;
+  text-align: center;
+}
+#right { 
+  background-color: white;
+  overflow:hidden;
+  margin:10px;
+  border:2px
+  min-height:170px;
+}
+
+@media screen and (max-width: 700px) {
+   #left { 
+    float: none;
+    margin-right:0;
+    width:auto;
+    border:0;
+    border-bottom:2px solid #000;    
+  }
+}
+
+.fa{
+    font-size: 25px
+}
+
+.fa-download{
+    font-size: 15px
+}
+
+.link{
+    font-size:15px;
+    color: #000;
+}
+
+ul#social li{
+  list-style: none;
+  display:inline;
+}
+
+.post-card {
+    box-shadow: 0 0 1px rgba(39, 44, 49, .1), 0 3px 16px rgba(39, 44, 49, .07);
+    transition: all .3s ease;
+}
+
+.post-card:hover {
+    box-shadow: 0 0 1px rgba(39, 44, 49, .1), 0 3px 16px rgba(39, 44, 49, .07);
+    transition: all .3s ease;
+    transform: none;
+}

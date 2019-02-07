@@ -1,0 +1,28 @@
+---
+layout: default
+current: home
+class: 'home-template'
+navigation: True
+---
+
+<link rel="stylesheet" href="/assets/built/font-awesome/css/font-awesome.css">
+<link rel="stylesheet" href="/assets/built/layout.css">
+
+{% include header.html %}
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+        <div class="post-feed">
+           <article class="post-card home-template">
+            <div class="post-card-content" style="flex: auto">
+                <header class="post-card-header">
+                    <h2 class="post-card-title"></h2>
+                </header>
+                <section class="post-card-excerpt">
+                    {{content}}
+                </section>
+            </div>
+        </article>
+    </div>
+</div>
+</main>
