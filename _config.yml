@@ -4,7 +4,7 @@ highlighter: rouge
 language: 'en-us'
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: '/'
+baseurl: ''
 
 # Website info
 title: Abhishek Paudel

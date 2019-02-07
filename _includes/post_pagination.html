@@ -1,9 +1,9 @@
 <nav class="pagination" role="pagination">
     {% if paginator.previous_page %}
-            <a class="newer-posts" href="{{ site.baseurl }}{{ paginator.previous_page_path | remove_first: '/'}}" title="Previous Page">&laquo; Newer Posts</a>
+            <a class="newer-posts" href="{{ site.baseurl }}/{{ paginator.previous_page_path | remove_first: '/'}}" title="Previous Page">&laquo; Newer Posts</a>
     {% endif %}
     <span class="page-number"> Page {{ paginator.page }} of {{ paginator.total_pages }} </span>
     {% if paginator.next_page %} 
-        <a class="older-posts" href="{{ site.baseurl }}{{ paginator.next_page_path | remove_first: '/'}}" title="Next Page">Older Posts &raquo;</a>
+        <a class="older-posts" href="{{ site.baseurl }}/{{ paginator.next_page_path | remove_first: '/'}}" title="Next Page">Older Posts &raquo;</a>
     {% endif %} 
 </nav>
