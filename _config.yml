@@ -34,7 +34,7 @@ disqus: True
 disqus_shortname: abpaudel # replace with your disqus username
 
 # Google Analytics
-google_analytics:  # replace with your GA tracking identifier
+google_analytics:  UA-52700205-1
 
 # Permalinks
 permalink: /blog/:slug/
