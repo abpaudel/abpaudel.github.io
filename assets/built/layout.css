@@ -1,6 +1,6 @@
 #bio-image {
   width: 150px;
-  height: 150px;
+  height: auto;
   margin: auto;
   border-radius: 50%;
 }
@@ -17,7 +17,8 @@
 }
 
 #left {
-  float:left; 
+  float:left;
+  margin-top: 10px;
   margin-right:20px;
   width:200px;
   border-right:2px;
@@ -34,7 +35,7 @@
 @media screen and (max-width: 700px) {
    #left { 
     float: none;
-    margin-right:0;
+    margin:0;
     width:auto;
     border:0;
     border-bottom:2px solid #000;    
@@ -46,7 +47,7 @@
 }
 
 .fa-download{
-    font-size: 15px
+    font-size: 12px
 }
 
 .download{
@@ -57,6 +58,9 @@ a{
   color: #3c484e
 }
 
+ul#social{
+  margin: 0;
+}
 ul#social li{
   list-style: none;
   display:inline;
