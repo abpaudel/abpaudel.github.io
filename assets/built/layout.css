@@ -49,9 +49,12 @@
     font-size: 15px
 }
 
-.link{
-    font-size:15px;
-    color: #000;
+.download{
+    font-size:15px
+}
+
+a{
+  color: #3c484e
 }
 
 ul#social li{
