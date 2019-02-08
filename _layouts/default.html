@@ -18,29 +18,15 @@
     <!-- highlight.js -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <style>.hljs { background: none; }</style>
-
-    <!--[if IE]>
-        <style>
-            p, ol, ul{
-                width: 100%;
-            }
-            blockquote{
-                width: 100%;
-            }
-        </style>
-    <![endif]-->
     
-    <!-- This tag outputs SEO meta+structured data and other important settings -->
     {% include head.html %}
 
 </head>
 <body class="{% if paginator.page > 1 %}paged archive-template{% elsif page.class %}{{ page.class }}{% else %}home-template{% endif %}">
 
     <div class="site-wrapper">
-        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
         {{ content }}
 
-        <!-- Previous/next page links - displayed on every page -->
         {% if paginator.total_posts > site.paginate %}
             {% if page.class == 'home-template' %}
                 {% include post_pagination.html %}
@@ -62,8 +48,8 @@
                 <section class="poweredby">Published with <a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></section>
                 <nav class="site-footer-nav">
-                    <a href="{{ site.baseurl }}/">Home</a>
-                    <a href="{{ site.baseurl }}/blog/">Blog</a>
+                    <a href="{{ site.baseurl }}/atom.xml">Atom</a>
+                    <a href="{{ site.baseurl }}/feed.xml">RSS</a>
                 </nav>
             </div>
         </footer>
@@ -102,15 +88,6 @@
     <script type="text/javascript" src="{{ site.baseurl }}/assets/js/jquery.fitvids.js"></script>
     <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
 
-
-    <!-- Paginator increased to "infinit" in _config.yml -->
-    <!-- if paginator.posts  -->
-    <!-- <script>
-        var maxPages = parseInt('{{ paginator.total_pages }}');
-    </script>
-    <script src="{{ site.baseurl }}/assets/js/infinitescroll.js"></script> -->
-    <!-- /endif -->
-
     {% if paginator.total_pages > site.paginate %}
     <script>
         var maxPages = parseInt('{{ paginator.total_pages }}');
@@ -122,15 +99,11 @@
     <!-- Add Google Analytics  -->
     {% include analytics.html %}
 
-    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
     {% if page.class == "post-template" %}
         {% include post-scripts.html %}
     {% elsif page.class == "page-template" %}
         {% include page-scripts.html %}
     {% endif %}
-
-    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
-    <!-- ghost_foot -->
 
 </body>
 </html>
