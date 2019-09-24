@@ -11,9 +11,9 @@ author: Abhishek Paudel
 cover: assets/img/blog-cover.jpg
 logo_dark: assets/img/favicon.png
 favicon: assets/img/favicon.png
-production_url: https://apaudel.com.np/
+production_url: https://abpaudel.com/
 source_url: https://github.com/abpaudel/abpaudel.github.io/
-CNAME: apaudel.com.np
+CNAME: abpaudel.com
 
 navigation: True
 subscribers: False
