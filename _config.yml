@@ -6,7 +6,7 @@ language: 'en-us'
 baseurl: ''
 
 title: Abhishek Paudel
-description: Computer Engineer | AI and Machine Learning Enthusiast
+description: Computer Science PhD Student | AI and Machine Learning Enthusiast
 author: Abhishek Paudel
 cover: assets/img/blog-cover.jpg
 logo_dark: assets/img/favicon.png
@@ -26,7 +26,7 @@ linkedin: abpaudel
 disqus: True
 disqus_shortname: abpaudel
 
-google_analytics:  UA-52700205-1
+google_analytics:  UA-52700205-2
 
 permalink: /blog/:slug/
 
