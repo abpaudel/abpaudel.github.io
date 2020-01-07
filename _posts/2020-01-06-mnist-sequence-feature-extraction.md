@@ -64,7 +64,7 @@ There was still a lot of margin left on all four sides of the thus extracted coo
 ![](/assets/img/posts/scale.png)
 *Figure 7. Cropping and Scaling of Coordinate Features*
 
-## Experiments
+## Experimental Results
 I wanted to evaluate how good the extracted features from MNIST perform using classifier models trained on pen digits dataset. So, I trained three simple classifiers, k-nearest neighbors, decision tree, and support vector machine on pen digits dataset that achieved the following accuracies.
 
 <table>
