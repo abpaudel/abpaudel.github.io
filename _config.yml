@@ -6,7 +6,7 @@ language: 'en-us'
 baseurl: ''
 
 title: Abhishek Paudel
-description: Computer Science PhD Student | AI and Machine Learning Enthusiast
+description: Computer Science PhD Student | Machine Learning and Computer Vision
 author: Abhishek Paudel
 cover: assets/img/blog-cover.jpg
 logo_dark: assets/img/favicon.png
