@@ -27,7 +27,7 @@ MNIST dataset consists of 70,000 grayscale images of handwritten digits. Each im
 ![](/assets/img/posts/mnist.png)
 *Figure 2. Sample digits from MNIST Dataset*
 
-Generally, this dataset is used to make predictions of digit labels given an image of the handwritten digit. But I'll dive into a different problem here: How to approximate the path of pen from these images? Put simply, how to extract pen digits dataset like features from MNIST images? Th problem can be simplied to extracting 8 sequence of sample coordinate points along the path of the digits similar to that in the pen digits dataset. I have broken down the process into a series of steps as follows.
+Generally, this dataset is used to make predictions of digit labels given an image of the handwritten digit. But I'll dive into a different problem here: How to approximate the path of pen from these images? Put simply, how to extract pen digits dataset like features from MNIST images? The problem can be simplied to extracting 8 sequence of sample coordinate points along the path of the digits similar to that in the pen digits dataset. I have broken down the process into a series of steps as follows.
 
 ## Feature Extraction Process
 ### Pixels to Coordinate Points
