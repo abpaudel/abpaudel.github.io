@@ -14,7 +14,7 @@ tags:
 I'll first introduce a dataset to enlighten the motivation behind doing this: Pen Digits Dataset.
 
 ## Pen Digits Dataset
-Pen Digits Dataset contains 250 samples of handwritten digits. Each sample consists of 16 features, which represent the sequence of 8 coordinate points sampled along the path of the pen's trajectory when drawing the digits, and each sample is labelled with the corresponding digit in the range of 0 to 9. The value of each feature is an integer in the range of 0 to 100. Therefore, each of the 8 sample points is a bounded in a 100x100 co-ordinate plane. Figure 1 shows sample digits from the dataset plotted by making a dotted line over the sequence of 8 coordinate points.
+Pen Digits Dataset contains 10,990 samples of handwritten digits. Each sample consists of 16 features, which represent the sequence of 8 coordinate points sampled along the path of the pen's trajectory when drawing the digits, and each sample is labelled with the corresponding digit in the range of 0 to 9. The value of each feature is an integer in the range of 0 to 100. Therefore, each of the 8 sample points is a bounded in a 100x100 co-ordinate plane. Figure 1 shows sample digits from the dataset plotted by making a dotted line over the sequence of 8 coordinate points.
 
 ![](/assets/img/posts/sample_digits.png)
 *Figure 1. Sample digits from Pen Digits Dataset. Square markers indicate starting point*
