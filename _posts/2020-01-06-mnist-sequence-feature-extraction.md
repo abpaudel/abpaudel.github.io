@@ -17,7 +17,7 @@ I'll first introduce a dataset to enlighten the motivation behind doing this: Pe
 Pen Digits Dataset contains 10,990 samples of handwritten digits. Each sample consists of 16 features, which represent the sequence of 8 coordinate points sampled along the path of the pen's trajectory when drawing the digits, and each sample is labelled with the corresponding digit in the range of 0 to 9. The value of each feature is an integer in the range of 0 to 100. Therefore, each of the 8 sample points is a bounded in a 100x100 co-ordinate plane. Figure 1 shows sample digits from the dataset plotted by making a dotted line over the sequence of 8 coordinate points.
 
 ![](/assets/img/posts/sample_digits.png)
-*Figure 1. Sample digits from Pen Digits Dataset. Square markers indicate starting point*
+*Figure 1. Sample digits from Pen Digits Dataset. Square markers indicate starting point.*
 
 Now, I'll introduce another popular dataset: MNIST Handwritten Digits Dataset
 
@@ -27,7 +27,7 @@ MNIST dataset consists of 70,000 grayscale images of handwritten digits. Each im
 ![](/assets/img/posts/mnist.png)
 *Figure 2. Sample digits from MNIST Dataset*
 
-Generally, this dataset is used to make predictions of digit labels given an image of the handwritten digit. But I'll dive into a different problem here: How to approximate the path of pen from these images? Put simply, how to extract pen digits dataset like features from MNIST images? The problem can be simplied to extracting 8 sequence of sample coordinate points along the path of the digits similar to that in the pen digits dataset. I have broken down the process into a series of steps as follows.
+Generally, this dataset is used to make predictions of digit labels given an image of the handwritten digit. But I'll dive into a different problem here: How to approximate the path of pen from these images? Put simply, how to extract pen digits dataset like features from MNIST images? The problem can be simplified to extracting 8 sequence of sample coordinate points along the path of the digits similar to that in the pen digits dataset. I have broken down the process into a series of steps as follows.
 
 ## Feature Extraction Process
 ### Pixels to Coordinate Points
@@ -36,10 +36,9 @@ Each pixel in a grayscale image is located in a 2D-space. So, I extracted coordi
 ![](/assets/img/posts/scatter.png)
 *Figure 3. Scatter plot of coordinate points corresponding to pixels*
 
-<table>
-<tr><th>Digit</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr>
-<tr><td>Threshold</td><td>70</td><td>110</td><td>100</td><td>110</td><td>50</td><td>80</td><td>100</td><td>60</td><td>100</td><td>70</td></tr>
-</table>
+|Digit|0|1|2|3|4|5|6|7|8|9|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|Threshold|70|110|100|110|50|80|100|60|100|70|
 
 *Table 1. Threshold for pixel values above which coordinate points are extracted from pixels*
 
@@ -67,19 +66,18 @@ There was still a lot of margin left on all four sides of the thus extracted coo
 ## Experimental Results
 I wanted to evaluate how good the extracted features from MNIST perform using classifier models trained on pen digits dataset. So, I trained three simple classifiers, k-nearest neighbors, decision tree, and support vector machine on pen digits dataset that achieved the following accuracies.
 
-<table>
-<tr><th></th><th>KNN</th><th>Decision Tree</th><th>SVM</th></tr>
-<tr><td>Train Accuracy</td><td>0.9972</td><td>0.9977</td><td>0.9913</td></tr><tr><td>Test Accuracy</td><td>0.9780</td><td>0.9159</td><td>0.9537</td></tr>
-</table>
+||KNN|Decision Tree|SVM|
+|:---:|:---:|:---:|:---:|
+|Train Accuracy|0.9972|0.9977|0.9913|
+|Test Accuracy|0.9780|0.9159|0.9537|
 
 *Table 2. Accuracy on Pen Digits Dataset*
 
 Then, for 500 sample digits (50 for each of the ten digit labels sampled randomly), I performed feature extraction as described above, and evaluated them on the classifiers trained on pen digits dataset. The performance on MNIST samples is as follows.
 
-<table>
-<tr><th></th><th>KNN</th><th>Decision Tree</th><th>SVM</th></tr>
-<tr><td>Accuracy</td><td>0.836</td><td>0.622</td><td>0.800</td></tr>
-</table>
+||KNN|Decision Tree|SVM|
+|:---:|:---:|:---:|:---:|
+|Accuracy|0.836|0.622|0.800|
 
 *Table 3. Accuracy on MNIST Dataset (500 samples)*
 
